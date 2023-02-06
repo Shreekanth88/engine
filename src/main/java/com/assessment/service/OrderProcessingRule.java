@@ -1,6 +1,6 @@
 package com.assessment.service;
 
-import com.assessment.dto.Product;
+import com.assessment.model.Product;
 import com.assessment.util.ProductTypes;
 
 import java.util.ArrayList;

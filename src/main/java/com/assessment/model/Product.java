@@ -1,4 +1,4 @@
-package com.assessment.dto;
+package com.assessment.model;
 
 import java.util.List;
 

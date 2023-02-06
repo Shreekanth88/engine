@@ -1,5 +1,7 @@
 package com.assessment.service;
 
+import java.util.List;
+
 public class CalculateTotalOrderValue {
   public static final int SKUA_PRICE = 50;
   public static final int SKUA3_COMBO = 130;
@@ -9,11 +11,11 @@ public class CalculateTotalOrderValue {
   public static final int SKUD_PRICE = 15;
   public static final int SKUCD_COMBO = 30;
 
-  public int totalCost(int skuAQuantity, int skuBQuantity, int skuCQuantity, int skuDQuantity) {
+  public int totalCost(List<Integer> cartItems) {
     int totalPrice = 0;
-    totalPrice = calculateSKUACost(skuAQuantity, totalPrice);
-    totalPrice = calculateSkuBCost(skuBQuantity, totalPrice);
-    totalPrice = calculateSKUCAndSKUDCombo(skuCQuantity, skuDQuantity, totalPrice);
+    totalPrice = calculateSKUACost(cartItems.get(0), totalPrice);
+    totalPrice = calculateSkuBCost(cartItems.get(1), totalPrice);
+    totalPrice = calculateSKUCAndSKUDCombo(cartItems.get(2), cartItems.get(3), totalPrice);
     return totalPrice;
   }
 

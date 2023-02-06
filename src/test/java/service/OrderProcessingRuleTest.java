@@ -1,6 +1,6 @@
 package service;
 
-import com.assessment.dto.Product;
+import com.assessment.model.Product;
 import com.assessment.service.OrderProcessingRule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

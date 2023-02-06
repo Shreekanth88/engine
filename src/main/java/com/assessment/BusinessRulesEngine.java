@@ -1,6 +1,7 @@
-package com.assessment.service;
+package com.assessment;
 
-import com.assessment.dto.Product;
+import com.assessment.model.Product;
+import com.assessment.service.OrderProcessingRule;
 
 import java.util.Scanner;
 

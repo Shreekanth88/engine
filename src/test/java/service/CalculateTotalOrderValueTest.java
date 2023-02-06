@@ -7,24 +7,42 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @ExtendWith(MockitoExtension.class)
 class CalculateTotalOrderValueTest {
 
   @InjectMocks
-  CalculateTotalOrderValue calculateCost;
+  CalculateTotalOrderValue calculateTotalOrderValue;
 
   @Test
   void test_scenario1() {
-    Assertions.assertEquals(100, calculateCost.totalCost(1, 1, 1, 0));
+    List<Integer> cartItems = new ArrayList<>();
+    cartItems.add(1);
+    cartItems.add(1);
+    cartItems.add(1);
+    cartItems.add(0);
+    Assertions.assertEquals(100, calculateTotalOrderValue.totalCost(cartItems));
   }
 
   @Test
   void test_scenario2() {
-    Assertions.assertEquals(370, calculateCost.totalCost(5, 5, 1, 0));
+    List<Integer> cartItems = new ArrayList<>();
+    cartItems.add(5);
+    cartItems.add(5);
+    cartItems.add(1);
+    cartItems.add(0);
+    Assertions.assertEquals(370, calculateTotalOrderValue.totalCost(cartItems));
   }
 
   @Test
   void test_scenario3() {
-    Assertions.assertEquals(280, calculateCost.totalCost(3, 5, 1, 1));
+    List<Integer> cartItems = new ArrayList<>();
+    cartItems.add(3);
+    cartItems.add(5);
+    cartItems.add(1);
+    cartItems.add(1);
+    Assertions.assertEquals(280, calculateTotalOrderValue.totalCost(cartItems));
   }
 }
