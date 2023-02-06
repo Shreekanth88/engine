@@ -1,7 +1,7 @@
 package com.assessment;
 
 import com.assessment.model.Product;
-import com.assessment.service.OrderProcessingRule;
+import com.assessment.service.OrderProcessingRuleImpl;
 
 import java.util.Scanner;
 
@@ -19,7 +19,7 @@ public class BusinessRulesEngine {
         Scanner sc1 = new Scanner(System.in);
         String input = sc1.nextLine();
         String[] inputs = input.split(" ");
-        OrderProcessingRule orderProcessingRule = new OrderProcessingRule();
+        OrderProcessingRuleImpl orderProcessingRule = new OrderProcessingRuleImpl();
         Product output = orderProcessingRule.convertInputToType(inputs);
         System.out.println("Operations : "+output.getOperations());
     }

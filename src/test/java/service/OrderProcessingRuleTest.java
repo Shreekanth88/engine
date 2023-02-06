@@ -1,7 +1,7 @@
 package service;
 
 import com.assessment.model.Product;
-import com.assessment.service.OrderProcessingRule;
+import com.assessment.service.OrderProcessingRuleImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -10,15 +10,16 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 @ExtendWith(MockitoExtension.class)
  class OrderProcessingRuleTest {
+
   @InjectMocks
-  OrderProcessingRule orderProcessingRule;
+  OrderProcessingRuleImpl orderProcessingRule;
+
   @Test
   void test_book() {
     String[] type = {"book"};
     Product product = orderProcessingRule.convertInputToType(type);
     Assertions.assertEquals("Generate a commission payment to the agent",product.getOperations().get(0));
     Assertions.assertEquals("create a duplicate packing slip for the royalty department",product.getOperations().get(1));
-
   }
 
   @Test

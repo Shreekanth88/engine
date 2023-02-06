@@ -1,6 +1,6 @@
 package service;
 
-import com.assessment.service.CalculateTotalOrderValue;
+import com.assessment.service.CalculateTotalOrderValueImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,7 +14,7 @@ import java.util.List;
 class CalculateTotalOrderValueTest {
 
   @InjectMocks
-  CalculateTotalOrderValue calculateTotalOrderValue;
+  CalculateTotalOrderValueImpl calculateTotalOrderValue;
 
   @Test
   void test_scenario1() {

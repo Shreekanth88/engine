@@ -1,6 +1,6 @@
 package com.assessment;
 
-import com.assessment.service.CalculateTotalOrderValue;
+import com.assessment.service.CalculateTotalOrderValueImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,7 @@ import java.util.Scanner;
 public class PromotionEngine {
 
     public static void main(String[] args) {
-        System.out.println("Application started");
-        CalculateTotalOrderValue calculateTotalOrderValue = new CalculateTotalOrderValue();
+        CalculateTotalOrderValueImpl calculateTotalOrderValue = new CalculateTotalOrderValueImpl();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter SKUA Quantity");
         int skuAQ = sc.nextInt();
